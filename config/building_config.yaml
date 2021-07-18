@@ -1,0 +1,25 @@
+# building configuration
+attribute:
+  - .//gml:name
+  - .//gen:stringAttribute[@name="建物ID"]/gen:value
+  - .//gen:stringAttribute[@name="大字・町コード"]/gen:value
+  - .//gen:stringAttribute[@name="町・丁目コード"]/gen:value
+  - .//bldg:measuredHeight
+  - [.//bldg:address, .//xAL:LocalityName]
+  - [.//uro:buildingDetails, .//uro:buildingRoofEdgeArea, .//uro:surveyYear]
+
+geometry:
+  - [.//bldg:lod0RoofEdge, .//gml:posList]
+
+column:
+  - 名称
+  - 建物ID
+  - 大字・町コード
+  - 町・丁目コード
+  - 計測高さ
+  - 住所
+  - 屋根面積
+  - 調査年(PLATEAU)
+  - geometry
+
+epsg: 6668
