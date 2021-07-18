@@ -1,0 +1,8 @@
+# transportation configuration
+geometry:
+  - [.//tran:lod1MultiSurface, .//gml:posList]
+
+column:
+- geometry
+
+epsg: 6668
