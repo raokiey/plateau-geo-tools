@@ -50,7 +50,7 @@ def main():
     gdf = city_objects.convert_gdf(element_array)
 
     # save file
-    save_name = os.path.basename(args.gml_path).split(".")[0]
+    save_name = os.path.basename(gml_path).split(".")[0]
     save_file(gdf, args.save_dir, save_name, args.save_format)
 
 
