@@ -62,9 +62,7 @@ class CityObject(object):
     def convert_gdf(self, element_array):
         """Convert parse result to GeoDataFrame.
         Args:
-            cfg (dict): Dictionary of loaded config yaml.
             element_array (numpy.array): Array of DataFrame element.
-            epsg (int, optional): EPSG code of target crs. Defaults to 6668.
         Returns:
             geopandas.GeoDataFrame: GeoDataFrame of parse result.
         """
