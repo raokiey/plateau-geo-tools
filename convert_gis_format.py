@@ -51,6 +51,7 @@ def main():
 
     # save file
     save_name = os.path.basename(gml_path).split(".")[0]
+    save_name = "_".join(save_name.split("_")[:2] + [str(city_objects.cfg["epsg"])])
     save_file(gdf, args.save_dir, save_name, args.save_format)
 
 
