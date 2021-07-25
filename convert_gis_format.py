@@ -41,10 +41,10 @@ def main():
 
     if args.module == "bldg":
         attr_list = city_objects.parse_attribute(root, nsmap)
-        element_array = np.hstack([np.array(attr_list), np.array(geom_list)])
+        element_array = np.hstack([np.array(attr_list), np.array(geom_list, dtype=object)])
 
     elif args.module == "tran":
-        element_array = np.array(geom_list)
+        element_array = np.array(geom_list, dtype=object)
 
     # convert GeoDataFrame
     gdf = city_objects.convert_gdf(element_array)
