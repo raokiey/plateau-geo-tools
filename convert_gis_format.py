@@ -24,11 +24,11 @@ def main():
     if args.module == "bldg":
         from lib.citygml.building import Building as object_parser
         if args.cfg_path is None:
-            args.cfg_path = "./config/building_config.yaml"
+            args.cfg_path = "./config/building_config.yml"
     elif args.module == "tran":
         from lib.citygml.transportation import Transportation as object_parser
         if args.cfg_path is None:
-            args.cfg_path = "./config/transportation_config.yaml"
+            args.cfg_path = "./config/transportation_config.yml"
 
     # load CityGML
     cfg_path = is_exist_path(args.cfg_path)
